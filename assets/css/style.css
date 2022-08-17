@@ -82,6 +82,22 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --clr-blue: #4782B5;
+  --clr-grey: #333;
+  --clr-white: #fff;
+  --clr-black: #000;
+}
+
 body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -97,58 +113,52 @@ li {
   list-style-type: none;
 }
 
-/*for wrapper*/
-.wrapper {
-  max-width: 1360px;
-  width: 86%; 
-  margin: 0 auto;
+/*=================================
+main styling starts here
+=================================*/
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--clr-blue);
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
 
+.box {
+  width: 130px;
+  height: 130px;
+  border: 2px solid var(--clr-black);
+  background-color: var(--clr-white);
+}
 
+.box.active {
+  border: 2px dashed var(--clr-white);
+  background-color: var(--clr-grey);
+}
 
+figure {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
 
+figure.hide {
+  display: none;
+}
 
-/*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
-=================================*/
-
-
-
-
-
-
-
+figure img {
+  height: 100%;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
